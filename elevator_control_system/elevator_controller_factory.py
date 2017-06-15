@@ -1,21 +1,17 @@
+import abc
+
+
 class ElevatorControllerFactory(object):
     """
     ABC for generating elevator classes
     """
-    MAX_ELEVATORS = 16
-
-    def __init__(self):
-        # initialize elevators
-        pass
-
-    def get_elevators(self):
-        pass
+    __metaclass__ = abc.ABCMeta
 
     def pick_up(self, pick_up_floor):
-        pass
+        raise NotImplementedError
 
     def destination(self, elevator_id, destination_floor):
-        pass
+        raise NotImplementedError
 
     def scheduling_request_to_elevator(self):
-        pass
+        raise NotImplementedError
